@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { IntroductionSectionComponent } from './introduction-section/introduction-section.component';
@@ -22,7 +21,6 @@ import { YoutubePlayerModule } from 'ngx-youtube-player';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule,
     ReactiveFormsModule,
     SlideshowModule,
     YoutubePlayerModule
