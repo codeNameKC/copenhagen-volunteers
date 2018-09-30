@@ -3,14 +3,29 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SignupFormComponent } from './signup-form/signup-form.component';
+import { IntroductionSectionComponent } from './introduction-section/introduction-section.component';
+import { FooterComponent } from './footer/footer.component';
+import { FormsModule }   from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms'; 
+import {SlideshowModule} from 'ng-simple-slideshow';
+import { YoutubePlayerModule } from 'ngx-youtube-player';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SignupFormComponent,
+    IntroductionSectionComponent,
+    FooterComponent
   ],
+  
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    SlideshowModule,
+    YoutubePlayerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

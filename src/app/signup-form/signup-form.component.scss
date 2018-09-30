@@ -1,0 +1,25 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+form {
+    background-color: black;
+    text-align: center;
+}
+
+.form-control.ng-touched.ng-invalid {
+    border: 2px solid red;
+}
+
+div.form-group {
+    padding: 0.5rem;
+}
+
+button {
+    margin-bottom: 1rem;
+}
+
+label {
+    text-decoration: underline;
+}
+
+.selected {
+    user-select: none;
+}

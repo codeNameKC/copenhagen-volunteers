@@ -1,1 +1,59 @@
 /* You can add global styles to this file, and also import other style files */
+@mixin centering ($flex-direction) {
+    display: flex; 
+    flex-direction: $flex-direction;
+    align-items: center; 
+    justify-content: center; 
+    algin-content: center; 
+    justify-items: center; 
+}
+
+  
+body {
+      max-width: 100%;
+      min-width: 100%; 
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+}
+  
+.vertical {
+    display: flex; 
+    @include centering(column);
+}
+
+.horizontal {
+    display: flex; 
+    @include centering(row);
+}
+
+/* For Computers (Design for Mobile-first): */
+@media only screen and (min-width: 768px) {
+    
+}
+
+
+.slideshow {
+    position: relative;
+    overflow: hidden;
+  }
+.images {
+    background: url('http://ww1.prweb.com/prfiles/2014/07/30/12060775/volunteers.jpg');
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: slideshow 20s linear infinite;
+    animation-delay: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+p, label, form, input, h1, h2, ul {
+    color: white; 
+}
+
+@keyframes slideshow {
+    0%    { left: 0; }
+    100%  { left: -200%; }
+}
+
+  

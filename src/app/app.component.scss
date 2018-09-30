@@ -1,0 +1,22 @@
+div.background {
+    background: linear-gradient(rgba(1, 0, 0, 0.9), rgba(0, 0, 0, 0.1)), url('http://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/header-facebook-copenhagen-cph0416.jpg?itok=-2LcgY1H');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+}
+
+img {
+    background-image: url('https://media-cdn.tripadvisor.com/media/photo-s/0b/6a/69/f2/huset-kbh.jpg');
+}
+
+.video {
+    margin-top: 1rem;
+}
+
+h2 {
+    text-align: center;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+}

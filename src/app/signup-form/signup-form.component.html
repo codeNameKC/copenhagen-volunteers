@@ -1,0 +1,64 @@
+<div class="container">
+    <form class="vertical" [formGroup]="volunteerForm" (ngSubmit)="onSubmit(volunteerForm.value)">
+        <h2>Become a Volunteer! </h2>
+        <div class="horizontal">
+            <div class="form-group vertical">
+                <label for="firstName">Firstname</label>
+                <input formControlName="firstName" name="firstName" id="firstName" type="text" class="form-control" placeholder="Firstname">
+                <div class="alert alert-danger" *ngIf="volunteerForm.controls['firstName'].touched && !volunteerForm.controls['firstName'].valid">
+                    Firstname is required
+                </div>
+            </div>
+
+            <div class="form-group vertical">
+                <label for="lastName">Lastname</label>
+                <input type="text" class="form-control" placeholder="Lastname" formControlName="lastName">
+
+                <div class="alert alert-danger" *ngIf="volunteerForm.controls['lastName'].touched && !volunteerForm.controls['lastName'].valid">
+                    Lastname is required
+                </div>
+            </div>
+        </div>
+
+        <div class="horizontal">
+            <div class="form-group vertical">
+                <label for="email">Email address</label>
+                <input type="email" formControlName="email" class="form-control" placeholder=" Email">
+
+                <div class="alert alert-danger" *ngIf="volunteerForm.controls['email'].touched && !volunteerForm.controls['email'].valid">
+                    Email is required
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group vertical">
+            <label> Gender</label>
+            <div class="horizontal">
+                <input type="radio" formControlName="gender" value="male"> Male <br/>
+                <input type="radio" formControlName="gender" value="female"> Female <br/>
+                <input type="radio" formControlName="gender" value="other"> Other
+            </div>
+            <div class="alert alert-danger" *ngIf="volunteerForm.controls['gender'].touched && !volunteerForm.controls['gender'].valid">
+                Choose your gender
+            </div>
+        </div>
+
+        <div class="form-group vertical">
+
+            <label for="skills">Your skills</label>
+
+            <div *ngFor="let skill of skills.controls; let i=index;">
+                <input type="checkbox" [formControl]="skill" /> {{volunteerSkills.skills[i].name}}
+            </div>
+        </div>
+
+        <div class="form-group vertical">
+            <label for="describeYourself">Describe yourself</label>
+            <textarea class="form-control" formControlName="about" placeholder="Tell us about yourself"> </textarea>
+            <div class="alert alert-danger" *ngIf="volunteerForm.controls['about'].touched && !volunteerForm.controls['about'].valid">
+                A short description about you is required
+            </div>
+        </div>
+        <button class="btn btn-primary" [disabled]="!volunteerForm.valid" type="submit"> Join Now! </button>
+    </form>
+</div>
